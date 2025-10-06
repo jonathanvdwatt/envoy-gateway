@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: application
+  name: nginx
   namespace: default
   labels:
-    app: application
-    service: application
+    app: nginx
+    service: nginx
 spec:
   selector:
-    app: application
+    app: nginx
   type: ClusterIP
   clusterIP: None
   ports:
