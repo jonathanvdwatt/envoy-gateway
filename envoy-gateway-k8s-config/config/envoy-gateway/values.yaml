@@ -1,5 +1,7 @@
 envoyproxy:
   name: edge-proxy
+  namespace: edge-proxy
+  replicas: 2
 
 gatewayclass:
   name: gw-class-edge-proxy
