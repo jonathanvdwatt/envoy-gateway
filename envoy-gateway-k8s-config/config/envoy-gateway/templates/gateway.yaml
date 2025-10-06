@@ -10,5 +10,6 @@ spec:
     port: 80
     protocol: HTTP
     allowedRoutes:
-      selector:
-        app: nginx
+      from:
+        selector:
+          app: nginx
