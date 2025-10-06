@@ -4,7 +4,7 @@ metadata:
   name: '{{ .Values.gateway.name }}'
   namespace: edge-proxy
 spec:
-  gatewayClassName: '{{ .Value.gatewayclass.name }}'
+  gatewayClassName: '{{ .Values.gatewayclass.name }}'
   listeners:
   - name: http
     port: 80
