@@ -11,7 +11,7 @@ items:
     parentRefs:
     - group: gateway.networking.k8s.io
       kind: Gateway
-      name: eg
+      name: gw-edge-proxy
     rules:
     - backendRefs:
       - group: ""
