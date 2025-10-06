@@ -1,0 +1,9 @@
+apiVersion: v2
+name: envoy-gateway
+description: A Helm chart for custom Envoy Gateway resources
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: foo
+dependencies: []

@@ -1,0 +1,11 @@
+iapiVersion: config.gateway.envoyproxy.io/v1alpha1
+kind: EnvoyProxy
+metadata:
+  name: edge-proxy
+  namespace: edge-proxy
+spec:
+  provider:
+    type: Kubernetes
+    kubernetes:
+      envoyDeployment:
+        replicas: 2

@@ -1,0 +1,8 @@
+envoyproxy:
+  name: edge-proxy
+
+gatewayclass:
+  name: gw-class-edge-proxy
+
+gateway:
+  name: gw-edge-proxy
