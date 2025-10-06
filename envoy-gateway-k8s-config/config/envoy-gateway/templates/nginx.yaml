@@ -1,0 +1,34 @@
+---
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: Backend
+metadata:
+  name: nginx-backend
+  namespace: default
+spec:
+  endpoints:
+  - fqdn:
+      hostname: www.nginx.com
+      port: 443
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: nginx-backend
+  namespace: default
+spec:
+  hostnames:
+  - www.nginx.com
+  parentRefs:
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: gw-edge-proxy
+    namespace: envoy-gateway-system
+  rules:
+  - backendRefs:
+    - group: gateway.envoyproxy.io
+      kind: Backend
+      name: nginx-backend
+    matches:
+    - path:
+        type: PathPrefix
+        value: /
