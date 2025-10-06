@@ -10,4 +10,5 @@ spec:
     port: 80
     protocol: HTTP
     allowedRoutes:
-      from: All
+      namespaces:
+        from: All
