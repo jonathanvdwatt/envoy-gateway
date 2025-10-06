@@ -8,4 +8,4 @@ spec:
     group: gateway.envoyproxy.io
     kind: EnvoyProxy
     name: '{{ .Values.envoyproxy.name }}'
-    namespace: envoy-gateway-system
+    namespace: '{{ .Values.namespace }}' 

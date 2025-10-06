@@ -1,6 +1,7 @@
+namespace: envoy-gateway-system
+
 envoyproxy:
   name: edge-proxy
-  namespace: envoy-gateway-system
   replicas: 2
 
 gatewayclass:
