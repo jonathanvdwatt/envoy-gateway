@@ -1,0 +1,18 @@
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: BackendTrafficPolicy
+metadata:
+  name: nginx-backend-policy
+  namespace: default
+spec:
+  targetRefs:
+  - group: gateway.envoyproxy.io
+    kind: Backend
+    name: nginx-backend
+  loadBalancer:
+    type: RoundRobin
+  healthCheck:
+    active:
+      http:
+        path: /
+      interval: 10s
+      timeout: 1s

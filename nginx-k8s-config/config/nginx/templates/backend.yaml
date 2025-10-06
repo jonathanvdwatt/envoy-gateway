@@ -1,0 +1,10 @@
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: Backend
+metadata:
+  name: nginx-backend
+  namespace: default
+spec:
+  endpoints:
+  - fqdn:
+      hostname: www.nginx.com
+      port: 80
